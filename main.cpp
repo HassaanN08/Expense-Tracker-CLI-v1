@@ -34,13 +34,13 @@ void displayExpenses(vector<string> description, vector<string> category, vector
         cout << "No expenses recorded yet." << '\n';
     } else {
         for (int i = 0; i < amount.size(); i++) {
-            cout << i << ". " << description[i] << " - " << category[i] << " - $" << amount[i] << '\n';
+            cout << i + 1 << ". " << description[i] << " - " << category[i] << " - $" << amount[i] << '\n';
         }
     }
 }
 
 void totalSpent(vector<double> amount) {
-    int amt = 0;
+    double amt = 0;
     for(int i = 0; i < amount.size(); i++) {
         amt += amount[i];
     }
@@ -73,7 +73,7 @@ void getExpensesByCategory(vector<string> description, vector<string> category, 
     } else {
         string cat;
         vector<int> catIndex;
-        int totalAmount = 0;
+        double totalAmount = 0;
         cout << "Here are the available categories:" << '\n';
 
         for (int i = 0; i < category.size(); i++) {
@@ -94,7 +94,7 @@ void getExpensesByCategory(vector<string> description, vector<string> category, 
             cout << "Category not found." << '\n';
         } else {
             for (int i = 0; i < catIndex.size(); i++) {
-                cout << i << ". " << description[catIndex[i]] << " - $" << amount[catIndex[i]] << '\n';
+                cout << i + 1 << ". " << description[catIndex[i]] << " - $" << amount[catIndex[i]] << '\n';
                 totalAmount += amount[catIndex[i]];
             }
 
