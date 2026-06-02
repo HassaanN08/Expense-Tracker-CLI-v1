@@ -53,7 +53,7 @@ int getHighestExpenseIndex(vector<double> amount) {
         cout << "No expenses recorded yet." << '\n';
         return -1;
     } else {
-        int currentAmount = amount[0];
+        double currentAmount = amount[0];
         int index = 0;
 
         for (int i = 1; i < amount.size(); i++) {
